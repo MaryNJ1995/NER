@@ -1,2 +1,3 @@
-# NER
-Name Entity Recognition
+# Semeval Multi NER
+
+تشخیص موجودیت‌های نامدار انگلیسی 
