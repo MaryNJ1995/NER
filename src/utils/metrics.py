@@ -1,3 +1,9 @@
+# -*- coding: utf-8 -*-
+"""
+    Complex NER Project:
+"""
+
+# ============================ Third Party libs ============================
 from collections import defaultdict
 from typing import Set
 from overrides import overrides

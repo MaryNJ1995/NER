@@ -1,9 +1,17 @@
+# -*- coding: utf-8 -*-
+"""
+    Complex NER Project:
+
+"""
+
+# ============================ Third Party libs ============================
 import logging
 from collections import namedtuple
 from copy import deepcopy
 from typing import List
 from seqeval.metrics import f1_score, accuracy_score, classification_report
 
+# ============================ My packages ============================
 from .helper import compute_metrics, collect_named_entities, compute_precision_recall_f1_wrapper
 
 logging.basicConfig(

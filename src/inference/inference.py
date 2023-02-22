@@ -1,10 +1,13 @@
+# -*- coding: utf-8 -*-
+"""
+    Complex NER Project:
+        inference:
+            inference.py
+"""
+
+# ============================ Third Party libs ============================
 from typing import List
 import numpy
-
-from configuration import BaseConfig
-
-CONFIG_CLASS = BaseConfig()
-CONFIG = CONFIG_CLASS.get_config()
 
 
 class Inference:
@@ -47,5 +50,6 @@ class Inference:
         :param batched_sample:
         :return:
         """
-        sentence = [self.tokenizer.convert_ids_to_tokens(idx) for idx in batched_sample["input_ids"]]
+        sentence = [self.tokenizer.convert_ids_to_tokens(idx) for idx in
+                    batched_sample["input_ids"]]
         return sentence

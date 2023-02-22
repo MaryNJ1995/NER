@@ -1,28 +1,58 @@
 # -*- coding: utf-8 -*-
-# ========================================================
-"""data_writer module is written for write data in files"""
-# ========================================================
+# ==========================================================================
 
+"""
+This module is written to write function for read different file types.
+"""
 
-# ========================================================
-# Imports
-# ========================================================
-
+# ============================ Third Party libs ============================
 import json
-
-__author__ = "Ehsan Tavan", "Ali Rahmati", "Maryam Najafi"
-__project__ = "signal entity detection"
-__version__ = "1.0.0"
-__date__ = "2021/09/27"
-__email__ = "tavan.ehsan@gmail.com"
+import pickle
 
 
-def write_json(path: str, data: dict) -> None:
+# ==========================================================================
+
+
+def write_json(data: dict, path: str) -> None:
     """
     write_json function is written for write in json files
-    :param path:
+
+    Args:
+        data: data to save in json
+        path: json path
+
+    Returns:
+        None
+
+    """
+
+    with open(path, "w", encoding="utf8") as outfile:
+        json.dump(data, outfile, separators=(",", ":"), indent=4)
+
+
+def write_pickle(data: list, path: str) -> None:
+    """
+    write_pickle function is written for write data in pickle file
+
+    Args:
+        data: data to save in pickle file
+        path: pickle path
+
+    Returns:
+        None
+
+    """
+
+    with open(path, "wb") as outfile:
+        pickle.dump(data, outfile)
+
+
+def write_text(data: list, path: str) -> None:
+    """
+    save_text function is written for write in text files
     :param data:
+    :param path:
     :return:
     """
-    with open(path, "w", encoding="utf-8") as outfile:
-        json.dump(data, outfile, separators=(",", ":"), indent=4)
+    with open(path, "w", encoding="utf-8") as file:
+        file.write("\n".join(data))

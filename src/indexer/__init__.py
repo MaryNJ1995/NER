@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-# pylint: disable-msg=import-error
 # ========================================================
 """indexer package is written for create indexer"""
 # ========================================================

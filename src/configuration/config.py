@@ -1,21 +1,19 @@
 # -*- coding: utf-8 -*-
-# pylint: disable-msg=too-few-public-methods
-# ========================================================
-"""config module is written for write parameters."""
-# ========================================================
+"""
+In this module we have add arguments and their default values in it.
+"""
 
-
-# ========================================================
-# Imports
-# ========================================================
-
+# ============================ Third Party libs ============================
 import argparse
 from pathlib import Path
 
 
+# ========================================================
+
+
 class BaseConfig:
     """
-    BaseConfig class is written to write configs in it
+    BaseConfig class is written to write arguments and their default values in it.
     """
 
     def __init__(self):
@@ -30,24 +28,15 @@ class BaseConfig:
                                  default=Path(__file__).parents[2].__str__() + "/assets/")
 
         self.parser.add_argument("--saved_model_path", type=str,
-                                 default=Path(__file__).parents[2].__str__() + "/assets/saved_models/")
+                                 default=Path(__file__).parents[
+                                             2].__str__() + "/assets/saved_models/")
 
         self.parser.add_argument("--language_model_path", type=str,
-                                 default=Path(__file__).parents[2].__str__()
-                                         + "/assets/pretrained_models/t5_en_large")
+                                 default=Path(__file__).parents[4].__str__()
+                                         + "/LanguageModels/t5_en_large")
         self.parser.add_argument("--language_model_tokenizer_path", type=str,
-                                 default=Path(__file__).parents[2].__str__()
-                                         + "/assets/pretrained_models/t5_en_large")
-        self.parser.add_argument("--roberta_model_path", type=str,
-                                 default=Path(__file__).parents[2].__str__()
-                                         + "/assets/pretrained_models/xlm_roberta_large")
-
-        self.parser.add_argument("--bpemb_model_path", type=str,
-                                 default=Path(__file__).parents[2].__str__()
-                                         + "/assets/pretrained_models/bpemb/dutch/nl.wiki.bpe.vs200000.model")
-        self.parser.add_argument("--bpemb_vocab_path", type=str,
-                                 default=Path(__file__).parents[2].__str__()
-                                         + "/assets/pretrained_models/bpemb/dutch/nl.wiki.bpe.vs200000.d300.w2v.bin")
+                                 default=Path(__file__).parents[4].__str__()
+                                         + "/LanguageModels/t5_en_large")
 
         self.parser.add_argument("--csv_logger_path", type=str,
                                  default=Path(__file__).parents[2].__str__() + "/assets")
@@ -56,9 +45,6 @@ class BaseConfig:
         self.parser.add_argument("--test_data", type=str, default="test_data.csv")
         self.parser.add_argument("--dev_data", type=str, default="EN-English/en_dev.conll")
 
-        self.parser.add_argument("--data_headers", type=list, default=["text", "label"])
-        self.parser.add_argument("--customized_headers", type=list, default=["text", "label"])
-
         self.parser.add_argument("--save_top_k", type=int, default=1, help="...")
 
         self.parser.add_argument("--num_workers", type=int,
@@ -66,36 +52,18 @@ class BaseConfig:
                                  help="...")
 
         self.parser.add_argument("--n_epochs", type=int,
-                                 default=100,
+                                 default=1,
                                  help="...")
 
         self.parser.add_argument("--batch_size", type=int,
                                  default=32,
                                  help="...")
 
-        self.parser.add_argument("--lr", default=2e-5,
-                                 help="...")
-
-        self.parser.add_argument("--lstm_units", type=int,
-                                 default=128,
-                                 help="...")
-        self.parser.add_argument("--lstm_layers", type=int,
-                                 default=2,
-                                 help="...")
-        self.parser.add_argument("--bidirectional", type=bool,
-                                 default=True,
-                                 help="...")
         self.parser.add_argument("--dropout", type=float,
                                  default=0.15,
                                  help="...")
-        self.parser.add_argument("--embedding_dim", type=int,
-                                 default=256,
-                                 help="...")
-        self.parser.add_argument("--alpha", type=float,
-                                 default=50.0,
-                                 help="...")
-        self.parser.add_argument("--alpha_warmup_ratio", type=float,
-                                 default=0.1,
+
+        self.parser.add_argument("--lr", default=2e-5,
                                  help="...")
 
     def get_config(self):

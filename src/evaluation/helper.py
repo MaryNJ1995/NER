@@ -1,3 +1,11 @@
+# -*- coding: utf-8 -*-
+"""
+    Complex NER Project:
+
+"""
+
+# ============================ Third Party libs ============================
+
 from copy import deepcopy
 from collections import namedtuple, defaultdict
 
