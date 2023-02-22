@@ -2,7 +2,7 @@
 """
     Complex NER Project:
         inference:
-            inference.py
+            inference_tester.py
 """
 
 # ============================ Third Party libs ============================
