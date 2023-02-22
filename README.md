@@ -35,6 +35,4 @@ the paper for this implementation can be found [here](https://aclanthology.org/2
 
 #### Test Model
 
->python inferencer.py
-
-
+> python inferencer.py
