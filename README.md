@@ -25,7 +25,14 @@ model is also evaluated in other languages.
 ![Screenshot from 2023-02-22 13-13-58](https://user-images.githubusercontent.com/86873813/220586905-e83055f8-5c10-4c97-9fa5-e9f7ab59520e.png)
 
 
+# Usages
+## Train Model:
 
+> python trainer.py
+
+## Test Model
+
+>python inferencer.py
 
 
 the paper for this implementation can be found [here](https://aclanthology.org/2022.semeval-1.226/)
