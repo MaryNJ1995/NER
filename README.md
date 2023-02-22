@@ -29,11 +29,11 @@ the paper for this implementation can be found [here](https://aclanthology.org/2
 
 
 # Usages
-## Train Model:
+### Train Model:
 
 > python trainer.py
 
-## Test Model
+### Test Model
 
 >python inferencer.py
 
